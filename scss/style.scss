@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round&family=Inter:wght@300&family=Lato:wght@300&family=Mulish:wght@500&family=Poppins:wght@200&family=Roboto&display=swap');
+
+$orange: #ec5242;
+$white: #ffff;
+$black: black;
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main {
+  nav {
+    width: 100%;
+    background-color: #ffd5;
+    height: 60px;
+    .menu {
+      position: relative;
+      cursor: pointer;
+      width: 60px;
+      border: 1px solid red;
+      background-color: rgba(11, 15, 11, 0.6);
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .hamburger {
+        position: absolute;
+        width: 40px;
+        height: 6px;
+        background-color: antiquewhite;
+        border-radius: 1px;
+        transition: all 0.5s ease-in-out;
+      }
+      .hamburger::before,
+      .hamburger::after {
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 6px;
+        background-color: antiquewhite;
+        border-radius: 1px;
+        transition: all 0.5s ease-in-out;
+      }
+      .hamburger::before {
+        transform: translateY(-8px);
+      }
+      .hamburger::after {
+        transform: translateY(8px);
+      }
+    }
+    .menu.open {
+      .hamburger {
+        background: transparent;
+        box-shadow: none;
+      }
+      .hamburger::before {
+        transform: rotate(45deg);
+        transform: translate(35px -35px);
+      }
+      .hamburger::after {
+        transform: rotate(-45deg);
+        transform: translate(35px 35px);
+      }
+    }
+  }
+
+  .section-1 {
+    padding: 5%;
+    .search {
+      position: relative;
+      input {
+        width: 100%;
+        height: 30px;
+        margin-bottom: 10px;
+        padding: 0;
+        border-radius: 5px;
+      }
+      input::placeholder {
+        padding: 10px;
+      }
+      .fa-search {
+        position: absolute;
+        color: $white;
+        border-radius: 3px;
+        height: 30px;
+        padding: 5px;
+        width: 30px;
+        align-self: center;
+        background-color: $orange;
+        right: 0;
+      }
+    }
+    .header-1 {
+      p {
+        color: $orange;
+        font-family: Inter, sans-serif;
+        font-size: 30px;
+        padding-bottom: 5px;
+      }
+      h1 {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 40px;
+        color: $orange;
+        padding-bottom: 10px;
+      }
+    }
+    .article-1 {
+      border: 2px wheat solid;
+      padding: 3%;
+    }
+  }
+  .products {
+    padding: 5%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    header {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      h2 {
+        color: $white;
+        margin-bottom: 10px;
+      }
+      span {
+        width: 50px;
+        height: 2px;
+        border-radius: 5px;
+        background-color: $orange;
+      }
+    }
+    .cards {
+      margin: 3%;
+      .card {
+        display: grid;
+        margin-bottom: 20px;
+        grid-template-columns: 0.2fr 1fr 1fr;
+        border: 1px solid red;
+        background-color: rgba(98, 98, 158, 0.385);
+        padding: 10px;
+        .fa-solid {
+          color: $white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        h2 {
+          color: $orange;
+          font-family: inter, sans-serif;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        p {
+          color: $white;
+          font-family: lato, sans-serif;
+        }
+      }
+      .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        button {
+          padding: 30px;
+          border: none;
+          font-size: large;
+          background-color: $orange;
+          font-family: inter, sans-serif;
+          color: $white;
+          width: 50%;
+          height: 100px;
+        }
+      }
+    }
+  }
+  .feature{
+    padding: 5%;
+    width: 100%;
+    height: 100%;
+    background-color: $white;
+    header {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      h2 {
+        color: $black;
+        margin-bottom: 10px;
+        font-family: lato;
+      }
+      span {
+        width: 50px;
+        height: 2px;
+        border-radius: 5px;
+        background-color: $orange;
+      }
+    }
+    .companies{
+     .list-company{
+      padding: 10px;
+      width: 100%;
+      border: 1px solid red;
+      border-radius: 3px;
+      background-color: rgba(85, 43, 14, 0.275);
+      height: 100px;
+      display: flex;
+      margin-top: 20px;
+      img{
+       width: max-content;
+       margin-right: 5px;
+      }
+      div{
+       h3{}
+      }
+     }
+    }
+  }
+}

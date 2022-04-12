@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Crete+Round&family=Inter:wght@300&family=Lato:wght@300&family=Mulish:wght@500&family=Poppins:wght@200&family=Roboto&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main nav {
+  width: 100%;
+  background-color: rgba(255, 255, 221, 0.3333333333);
+  height: 60px;
+}
+main nav .menu {
+  position: relative;
+  cursor: pointer;
+  width: 60px;
+  border: 1px solid red;
+  background-color: rgba(11, 15, 11, 0.6);
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main nav .menu .hamburger {
+  position: absolute;
+  width: 40px;
+  height: 6px;
+  background-color: antiquewhite;
+  border-radius: 1px;
+  transition: all 0.5s ease-in-out;
+}
+main nav .menu .hamburger::before,
+main nav .menu .hamburger::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 6px;
+  background-color: antiquewhite;
+  border-radius: 1px;
+  transition: all 0.5s ease-in-out;
+}
+main nav .menu .hamburger::before {
+  transform: translateY(-8px);
+}
+main nav .menu .hamburger::after {
+  transform: translateY(8px);
+}
+main nav .menu.open .hamburger {
+  background: transparent;
+  box-shadow: none;
+}
+main nav .menu.open .hamburger::before {
+  transform: rotate(45deg);
+  transform: translate(35px -35px);
+}
+main nav .menu.open .hamburger::after {
+  transform: rotate(-45deg);
+  transform: translate(35px 35px);
+}
+main .section-1 {
+  padding: 5%;
+}
+main .section-1 .search {
+  position: relative;
+}
+main .section-1 .search input {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 10px;
+  padding: 0;
+  border-radius: 5px;
+}
+main .section-1 .search input::placeholder {
+  padding: 10px;
+}
+main .section-1 .search .fa-search {
+  position: absolute;
+  color: white;
+  border-radius: 3px;
+  height: 30px;
+  padding: 5px;
+  width: 30px;
+  align-self: center;
+  background-color: #ec5242;
+  right: 0;
+}
+main .section-1 .header-1 p {
+  color: #ec5242;
+  font-family: Inter, sans-serif;
+  font-size: 30px;
+  padding-bottom: 5px;
+}
+main .section-1 .header-1 h1 {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 40px;
+  color: #ec5242;
+  padding-bottom: 10px;
+}
+main .section-1 .article-1 {
+  border: 2px wheat solid;
+  padding: 3%;
+}
+main .products {
+  padding: 5%;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+main .products header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+main .products header h2 {
+  color: white;
+  margin-bottom: 10px;
+}
+main .products header span {
+  width: 50px;
+  height: 2px;
+  border-radius: 5px;
+  background-color: #ec5242;
+}
+main .products .cards {
+  margin: 3%;
+}
+main .products .cards .card {
+  display: grid;
+  margin-bottom: 20px;
+  grid-template-columns: 0.2fr 1fr 1fr;
+  border: 1px solid red;
+  background-color: rgba(98, 98, 158, 0.385);
+  padding: 10px;
+}
+main .products .cards .card .fa-solid {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .products .cards .card h2 {
+  color: #ec5242;
+  font-family: inter, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .products .cards .card p {
+  color: white;
+  font-family: lato, sans-serif;
+}
+main .products .cards .center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .products .cards .center button {
+  padding: 30px;
+  border: none;
+  font-size: large;
+  background-color: #ec5242;
+  font-family: inter, sans-serif;
+  color: white;
+  width: 50%;
+  height: 100px;
+}
+main .feature {
+  padding: 5%;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+main .feature header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+main .feature header h2 {
+  color: black;
+  margin-bottom: 10px;
+  font-family: lato;
+}
+main .feature header span {
+  width: 50px;
+  height: 2px;
+  border-radius: 5px;
+  background-color: #ec5242;
+}
+main .feature .companies .list-company {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid red;
+  border-radius: 3px;
+  background-color: rgba(85, 43, 14, 0.275);
+  height: 100px;
+  display: flex;
+  margin-top: 20px;
+}
+main .feature .companies .list-company img {
+  width: max-content;
+  margin-right: 5px;
+}
+
+/*# sourceMappingURL=style.css.map */
