@@ -330,7 +330,7 @@ main {
       }
     }
   }
-  .feature {
+  .logo {
     div {
       display: flex;
       align-items: center;
@@ -389,11 +389,19 @@ main {
       }
     }
   }
-  .footer{
-    display: flex;
-    padding: 5%;
-    img{
-      width: auto;
+  .footer {
+    width: 100%;
+    div {
+      display: flex;
+      padding: 5%;
+      img {
+        width: 50%;
+      }
+      P {
+        font-size: 20px;
+        color: $grey;
+        font-family: inter, sans-serif;
+      }
     }
   }
 }
