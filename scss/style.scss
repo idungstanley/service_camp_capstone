@@ -15,11 +15,13 @@ main {
   background-image: url(../Images/mobile-bg.png);
   background-repeat: no-repeat;
   background-size: contain;
+
   .social {
     width: 100%;
     display: none;
     background-color: $black;
     height: 50px;
+
     .social-container {
       display: flex;
       list-style: none;
@@ -32,14 +34,17 @@ main {
       }
     }
   }
+
   .navbar {
     width: 100%;
     position: absolute;
+    z-index: 10;
     top: 0;
     position: sticky;
     background-color: $white;
     padding-left: 5%;
     height: 60px;
+
     .menu {
       position: relative;
       cursor: pointer;
@@ -48,6 +53,13 @@ main {
       display: flex;
       justify-content: center;
       align-items: center;
+
+      a {
+        img {
+          display: none;
+        }
+      }
+
       .hamburger {
         position: absolute;
         width: 40px;
@@ -56,6 +68,7 @@ main {
         border-radius: 1px;
         transition: all 0.5s ease-in-out;
       }
+
       .hamburger::before,
       .hamburger::after {
         content: '';
@@ -66,22 +79,27 @@ main {
         border-radius: 1px;
         transition: all 0.5s ease-in-out;
       }
+
       .hamburger::before {
         transform: translateY(-8px);
       }
+
       .hamburger::after {
         transform: translateY(8px);
       }
     }
+
     .menu.open {
       .hamburger {
         background: transparent;
         box-shadow: none;
       }
+
       .hamburger::before {
         transform: rotate(45deg);
         transform: translate(35px -35px);
       }
+
       .hamburger::after {
         transform: rotate(-45deg);
         transform: translate(35px 35px);
@@ -92,8 +110,6 @@ main {
       display: block;
       width: 100%;
       list-style: none;
-      z-index: 1000;
-      transform: translateY(0);
       position: fixed;
       top: 60px;
       left: -100%;
@@ -101,17 +117,17 @@ main {
       gap: 0;
       width: 100%;
       height: 100vh;
-      text-align: center;
       transition: 0.3s;
       background-color: $white;
       list-style: none;
+
       .list-item {
         border-bottom: solid 1px #6f6c6b;
         padding-left: 20px;
         text-align: start;
-        width: 95%;
         text-decoration: none;
         margin: 20px 0;
+
         a {
           text-decoration: none;
           color: rgba(23, 3, 3, 0.537);
@@ -122,8 +138,10 @@ main {
 
   .section-1 {
     padding: 5%;
+
     .search {
       position: relative;
+
       input {
         width: 100%;
         height: 30px;
@@ -131,9 +149,11 @@ main {
         padding: 0;
         border-radius: 5px;
       }
+
       input::placeholder {
         padding: 10px;
       }
+
       .fa-search {
         position: absolute;
         color: $white;
@@ -146,14 +166,17 @@ main {
         right: 0;
       }
     }
+
     .header-1 {
       margin-top: 20px;
+
       p {
         color: $orange;
         font-family: Inter, sans-serif;
         font-size: 30px;
         padding-bottom: 5px;
       }
+
       h1 {
         display: flex;
         flex-wrap: wrap;
@@ -167,11 +190,13 @@ main {
         -webkit-text-fill-color: transparent;
       }
     }
+
     .article-1 {
       border: 2px wheat solid;
       padding: 3%;
     }
   }
+
   .products {
     padding: 5%;
     width: 100%;
@@ -181,15 +206,18 @@ main {
     background-image: url(../Images/program-bg.jpg);
     background-position: 100%;
     background-repeat: no-repeat;
+
     header {
       display: flex;
       justify-content: center;
       flex-direction: column;
       align-items: center;
+
       h2 {
         color: $white;
         margin-bottom: 10px;
       }
+
       span {
         width: 50px;
         height: 2px;
@@ -197,20 +225,24 @@ main {
         background-color: $orange;
       }
     }
+
     .cards {
       margin: 3%;
+
       .card {
         display: grid;
         margin-bottom: 20px;
         grid-template-columns: 0.2fr 1fr 1fr;
         background-color: rgba(98, 98, 158, 0.385);
         padding: 10px;
+
         .fa-solid {
           color: $white;
           display: flex;
           justify-content: center;
           align-items: center;
         }
+
         h2 {
           color: $orange;
           font-family: inter, sans-serif;
@@ -218,15 +250,23 @@ main {
           justify-content: center;
           align-items: center;
         }
+
         p {
           color: $white;
           font-family: lato, sans-serif;
         }
       }
+
+      .card:focus,
+      .card:hover {
+        border: 1px solid $grey;
+      }
+
       .center {
         display: flex;
         justify-content: center;
         align-items: center;
+
         button {
           padding: 30px;
           border: none;
@@ -240,21 +280,25 @@ main {
       }
     }
   }
+
   .feature {
     padding: 5%;
     width: 100%;
     height: 100%;
     background-color: $white;
+
     header {
       display: flex;
       justify-content: center;
       flex-direction: column;
       align-items: center;
+
       h2 {
         color: $black;
         margin-bottom: 10px;
         font-family: lato;
       }
+
       span {
         width: 50px;
         height: 2px;
@@ -262,33 +306,49 @@ main {
         background-color: $orange;
       }
     }
+
     .companies {
       .list-company {
+        background-image: url(../Images/blank-chess-board.gif);
+        background-repeat: no-repeat;
+        background-position: -20px -30px;
+        background-size: 20%;
         padding: 10px;
         width: 100%;
+        height: 30px;
         border-radius: 3px;
         background-color: $white;
         height: min-content;
         display: flex;
         margin-top: 20px;
+
         img {
           width: 150px;
           margin-right: 5px;
         }
+
         div {
           display: flex;
           flex-direction: column;
+
           h3 {
             font-family: inter, sans-serif;
             margin-bottom: 5px;
             font-size: 30px;
           }
+
           h4 {
-            font-family: lato, 'Gill Sans', 'Gill Sans MT', Calibri,
-              'Trebuchet MS', sans-serif;
+            font-family:
+              lato,
+              'Gill Sans',
+              'Gill Sans MT',
+              Calibri,
+              'Trebuchet MS',
+              sans-serif;
             margin-bottom: 5px;
             color: $orange;
           }
+
           span {
             margin-bottom: 5px;
             width: 30px;
@@ -298,18 +358,32 @@ main {
           }
         }
       }
+
+      .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .more-or-less {
+          width: 50%;
+          height: 40px;
+        }
+      }
     }
   }
 
   .section-about {
     padding: 5%;
+
     .header-about {
       text-align: center;
       margin-top: 20px;
+
       p {
         color: $orange;
         font-size: 20px;
       }
+
       h1 {
         color: $orange;
         font-size: 30px;
@@ -317,91 +391,707 @@ main {
         font-family: sans-serif, lato;
       }
     }
+
     .article-1 {
       border: solid 1px grey;
       background-color: $white;
       padding: 10px;
     }
+
     .reach {
       text-align: center;
       margin: 20px 20px;
+
       span {
         color: $orange;
       }
     }
   }
+
   .logo {
+    padding: 5%;
+    width: 100%;
+    height: 100%;
+    background-color: $white;
+
+    header {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+
+      h2 {
+        color: $black;
+        margin-bottom: 10px;
+        font-family: lato;
+      }
+
+      span {
+        width: 50px;
+        height: 2px;
+        border-radius: 5px;
+        background-color: $orange;
+      }
+    }
+
     div {
       display: flex;
       align-items: center;
       justify-content: center;
+
       img {
         margin-top: 20px;
         width: 50%;
         height: auto;
       }
     }
+
     hr {
       width: 100%;
       margin-top: 30px;
       background-color: #6f6c6b;
     }
   }
+
+  .summit-history {
+    padding: 5%;
+    width: 100%;
+    height: 100%;
+    background-color: $white;
+
+    header {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+
+      h2 {
+        color: $black;
+        margin-bottom: 10px;
+        font-family: lato;
+      }
+
+      span {
+        width: 50px;
+        height: 2px;
+        border-radius: 5px;
+        background-color: $orange;
+      }
+    }
+
+    p {
+      margin-top: 15px;
+      text-align: center;
+    }
+
+    .img {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 40px;
+
+      .first {
+        background:
+          linear-gradient(rgb(72, 0, 72, 0.8), rgb(192, 72, 72, 0.8)),
+          url(../Images/workshop1.jpg);
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: $white;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 300px;
+      }
+
+      .second {
+        background-image:
+          linear-gradient(
+            rgb(72, 0, 72, 0.8),
+            rgb(192, 72, 72, 0.8)
+          ),
+          url(../Images/workshop2.jpg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: $white;
+        width: 40%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 300px;
+      }
+    }
+  }
+
   .partner {
     background-color: $black;
     padding: 5%;
     width: 100%;
     height: 100%;
+
     span {
       width: 50px;
       height: 2px;
       border-radius: 5px;
       background-color: $orange;
     }
+
     header {
       display: flex;
       justify-content: center;
       flex-direction: column;
       align-items: center;
+
       h2 {
         margin-bottom: 10px;
         color: $white;
         font-family: lato;
       }
     }
+
     .partners-grid {
       width: 100%;
       display: grid;
       grid-template-columns: 33.33% 33.33% 33.33%;
+
       p {
         color: $grey;
         font-size: 30px;
         margin-top: 10px;
       }
+
       .row {
         grid-column: 1;
         padding-left: 30px;
         font-size: 60px;
       }
+
       .row-2 {
         grid-column: 3;
         font-size: 60px;
       }
     }
   }
+
   .footer {
     width: 100%;
+
     div {
       display: flex;
       padding: 5%;
+
       img {
         width: 50%;
       }
-      P {
+
+      p {
         font-size: 20px;
         color: $grey;
         font-family: inter, sans-serif;
       }
     }
+  }
+}
+
+@media screen and (min-width: 760px) {
+  main {
+    background-image: url(../Images/Website-background.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    .social {
+      width: 100%;
+      display: block;
+      background-color: $black;
+      height: 50px;
+
+      .social-container {
+        display: flex;
+        padding: 15px 15px 10px 0;
+        justify-content: flex-end;
+        align-items: center;
+        list-style: none;
+
+        .social-item {
+          margin-left: 20px;
+
+          a {
+            text-decoration: none;
+            color: $white;
+          }
+
+          a:focus {
+            color: $orange;
+          }
+        }
+      }
+    }
+
+    .navbar {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      position: sticky;
+      top: 0;
+      background-color: $white;
+      padding-left: 5%;
+      height: 60px;
+
+      .menu {
+        display: block;
+
+        a {
+          img {
+            width: 200px;
+            display: block;
+          }
+        }
+
+        .hamburger {
+          display: none;
+        }
+      }
+
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .list-container {
+          display: flex;
+          justify-content: space-around;
+          flex-direction: row;
+          width: 100%;
+          list-style: none;
+          position: sticky;
+          right: 0;
+          height: 60px;
+          transition: 0;
+          list-style: none;
+
+          .list-item {
+            border-bottom: none;
+            padding-left: 20px;
+            text-align: end;
+            text-decoration: none;
+            margin: 20px 0;
+
+            a {
+              text-decoration: none;
+              color: rgba(23, 3, 3, 0.537);
+              padding: 10px;
+            }
+
+            a:focus {
+              color: $orange;
+            }
+          }
+
+          .last-child {
+            a {
+              border: 5px solid $orange;
+            }
+          }
+        }
+      }
+    }
+
+    .section-1 {
+      padding: 5% 10%;
+      width: 80%;
+
+      .search {
+        position: relative;
+
+        input {
+          width: 100%;
+          height: 30px;
+          margin-bottom: 10px;
+          padding: 0;
+          border-radius: 5px;
+        }
+
+        input::placeholder {
+          padding: 10px;
+        }
+
+        .fa-search {
+          position: absolute;
+          color: $white;
+          border-radius: 3px;
+          height: 30px;
+          padding: 5px;
+          width: 30px;
+          align-self: center;
+          background-color: $orange;
+          right: 0;
+        }
+      }
+
+      .header-1 {
+        margin-top: 20px;
+
+        p {
+          color: $orange;
+          font-family: Inter, sans-serif;
+          font-size: 30px;
+          padding-bottom: 5px;
+        }
+
+        h1 {
+          display: flex;
+          flex-wrap: wrap;
+          font-size: 40px;
+          color: $orange;
+          padding-bottom: 10px;
+          background-image: url(../Images/service_camp.jpeg);
+          background-position: bottom;
+          background-clip: initial;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+
+      .article-1 {
+        border: 5px solid $white;
+        padding: 3%;
+      }
+    }
+
+    .products {
+      padding: 5%;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-image: url(../Images/program-bg.jpg);
+      background-position: 100%;
+      background-repeat: no-repeat;
+
+      header {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        h2 {
+          color: $white;
+          margin-bottom: 10px;
+        }
+
+        span {
+          width: 50px;
+          height: 2px;
+          border-radius: 5px;
+          background-color: $orange;
+        }
+      }
+
+      .cards {
+        margin: 3%;
+        display: flex;
+
+        .card {
+          width: 100%;
+          margin-right: 5px;
+          border-radius: 3px;
+          display: flex;
+          justify-content: center;
+          margin-bottom: 20px;
+          flex-direction: column;
+          background-color: rgba(255, 255, 255, 0.1);
+          padding: 10px;
+
+          img {
+            width: 50px;
+            height: 30px;
+            display: block;
+            margin: auto;
+          }
+
+          h2 {
+            color: $orange;
+            font-size: small;
+            font-weight: 400;
+            text-align: center;
+            font-family: cocogoose, inter, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+          p {
+            color: $white;
+            text-align: center;
+            font-family: lato, sans-serif;
+          }
+        }
+
+        .center {
+          display: none;
+        }
+      }
+
+      .see-more {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        a {
+          color: $white;
+        }
+      }
+    }
+
+    .feature {
+      padding: 5%;
+      width: 100%;
+      height: 100%;
+      background-color: $white;
+
+      header {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        h2 {
+          color: $black;
+          margin-bottom: 10px;
+          font-family: lato;
+        }
+
+        span {
+          width: 50px;
+          height: 2px;
+          border-radius: 5px;
+          background-color: $orange;
+        }
+      }
+
+      .companies {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        .list-company {
+          background-image: url(../Images/blank-chess-board.gif);
+          background-repeat: no-repeat;
+          background-position: 25px 25px;
+          background-size: 20%;
+          padding: 50px;
+          width: 100%;
+          border-radius: 3px;
+          background-color: $white;
+          height: min-content;
+          display: flex;
+          margin-top: 20px;
+
+          img {
+            width: 100%;
+            height: 120px;
+            margin-right: 5px;
+          }
+
+          div {
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+              font-family: inter, sans-serif;
+              margin-bottom: 5px;
+              font-size: 30px;
+            }
+
+            h4 {
+              font-family:
+                lato,
+                'Gill Sans',
+                'Gill Sans MT',
+                Calibri,
+                'Trebuchet MS',
+                sans-serif;
+              margin-bottom: 5px;
+              color: $orange;
+            }
+
+            span {
+              margin-bottom: 5px;
+              width: 30px;
+              height: 3px;
+              border-radius: 5px;
+              background-color: rgba(10, 8, 8, 0.503);
+            }
+          }
+        }
+      }
+    }
+
+    .section-about {
+      padding: 5%;
+
+      .header-about {
+        text-align: center;
+        width: 50%;
+        margin: auto;
+        margin-top: 20px;
+
+        p {
+          color: $orange;
+          font-size: 20px;
+        }
+
+        h1 {
+          color: $orange;
+          font-size: 30px;
+          font-weight: bolder;
+          font-family: sans-serif, lato;
+        }
+      }
+
+      .article-1 {
+        width: 50%;
+        height: fit-content;
+        margin: auto;
+        border: solid 1px grey;
+        background-color: $white;
+        padding: 20px;
+
+        p {
+          font-size: 15px;
+          font-family: lato, sans-serif;
+          display: table-row;
+        }
+      }
+
+      .reach {
+        text-align: center;
+        margin: 20px 20px;
+
+        span {
+          color: $orange;
+        }
+      }
+    }
+
+    .logo {
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          margin-top: 20px;
+          width: 50%;
+          height: auto;
+        }
+      }
+
+      hr {
+        width: 100%;
+        margin-top: 30px;
+        background-color: #6f6c6b;
+      }
+    }
+
+    .partner {
+      background-color: $black;
+      padding: 5%;
+      width: 100%;
+      height: 100%;
+
+      span {
+        width: 50px;
+        height: 2px;
+        border-radius: 5px;
+        background-color: $orange;
+      }
+
+      header {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        h2 {
+          margin-bottom: 10px;
+          color: $white;
+          font-family: lato;
+        }
+      }
+
+      .partners-grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+
+        p {
+          color: $grey;
+          font-size: 30px;
+          margin-top: 50px;
+        }
+
+        .row {
+          grid-area: 1/4;
+          padding-left: 0;
+          font-size: 30px;
+        }
+
+        .row-2 {
+          grid-area: 1/5;
+          font-size: 30px;
+        }
+      }
+    }
+  }
+
+  .about-footer {
+    width: 100%;
+    color: $black;
+
+    div {
+      display: flex;
+      padding: 5%;
+
+      img {
+        width: 50%;
+        height: 50px;
+      }
+
+      p {
+        font-size: 20px;
+        color: $grey;
+        font-family: cocogoose, inter, sans-serif;
+
+        span {
+          color: #272a31;
+        }
+      }
+    }
+  }
+}
+
+.img {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-content: space-between;
+
+  .first {
+    background-image: url(../Images/workshop1.jpg);
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+  }
+
+  .second {
+    display: flex;
+    flex-direction: column;
+    background-image: url(../Images/workshop2.jpg);
+    width: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
   }
 }
