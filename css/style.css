@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Crete+Round&family=Inter:wght@300&family=Lato:wght@300&family=Mulish:wght@500&family=Poppins:wght@200&family=Roboto&display=swap");
-
 * {
   padding: 0;
   margin: 0;
@@ -11,24 +10,20 @@ main {
   background-repeat: no-repeat;
   background-size: contain;
 }
-
 main .social {
   width: 100%;
   display: none;
   background-color: #272a31;
   height: 50px;
 }
-
 main .social .social-container {
   display: flex;
   list-style: none;
 }
-
 main .social .social-container .social-item a {
   text-decoration: none;
   color: #ec5242;
 }
-
 main .navbar {
   width: 100%;
   position: absolute;
@@ -39,7 +34,6 @@ main .navbar {
   padding-left: 5%;
   height: 60px;
 }
-
 main .navbar .menu {
   position: relative;
   cursor: pointer;
@@ -49,11 +43,9 @@ main .navbar .menu {
   justify-content: center;
   align-items: center;
 }
-
 main .navbar .menu a img {
   display: none;
 }
-
 main .navbar .menu .hamburger {
   position: absolute;
   width: 40px;
@@ -62,7 +54,6 @@ main .navbar .menu .hamburger {
   border-radius: 1px;
   transition: all 0.5s ease-in-out;
 }
-
 main .navbar .menu .hamburger::before,
 main .navbar .menu .hamburger::after {
   content: "";
@@ -73,30 +64,24 @@ main .navbar .menu .hamburger::after {
   border-radius: 1px;
   transition: all 0.5s ease-in-out;
 }
-
 main .navbar .menu .hamburger::before {
   transform: translateY(-8px);
 }
-
 main .navbar .menu .hamburger::after {
   transform: translateY(8px);
 }
-
 main .navbar .menu.open .hamburger {
   background: transparent;
   box-shadow: none;
 }
-
 main .navbar .menu.open .hamburger::before {
   transform: rotate(45deg);
   transform: translate(35px -35px);
 }
-
 main .navbar .menu.open .hamburger::after {
   transform: rotate(-45deg);
   transform: translate(35px 35px);
 }
-
 main .navbar .list-container {
   display: block;
   width: 100%;
@@ -112,7 +97,6 @@ main .navbar .list-container {
   background-color: white;
   list-style: none;
 }
-
 main .navbar .list-container .list-item {
   border-bottom: solid 1px #6f6c6b;
   padding-left: 20px;
@@ -120,20 +104,16 @@ main .navbar .list-container .list-item {
   text-decoration: none;
   margin: 20px 0;
 }
-
 main .navbar .list-container .list-item a {
   text-decoration: none;
   color: rgba(23, 3, 3, 0.537);
 }
-
 main .section-1 {
   padding: 5%;
 }
-
 main .section-1 .search {
   position: relative;
 }
-
 main .section-1 .search input {
   width: 100%;
   height: 30px;
@@ -141,11 +121,9 @@ main .section-1 .search input {
   padding: 0;
   border-radius: 5px;
 }
-
 main .section-1 .search input::placeholder {
   padding: 10px;
 }
-
 main .section-1 .search .fa-search {
   position: absolute;
   color: white;
@@ -157,18 +135,15 @@ main .section-1 .search .fa-search {
   background-color: #ec5242;
   right: 0;
 }
-
 main .section-1 .header-1 {
   margin-top: 20px;
 }
-
 main .section-1 .header-1 p {
   color: #ec5242;
   font-family: Inter, sans-serif;
   font-size: 30px;
   padding-bottom: 5px;
 }
-
 main .section-1 .header-1 h1 {
   display: flex;
   flex-wrap: wrap;
@@ -181,12 +156,10 @@ main .section-1 .header-1 h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 main .section-1 .article-1 {
   border: 2px wheat solid;
   padding: 3%;
 }
-
 main .products {
   padding: 5%;
   width: 100%;
@@ -196,30 +169,25 @@ main .products {
   background-position: 100%;
   background-repeat: no-repeat;
 }
-
 main .products header {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
-
 main .products header h2 {
   color: white;
   margin-bottom: 10px;
 }
-
 main .products header span {
   width: 50px;
   height: 2px;
   border-radius: 5px;
   background-color: #ec5242;
 }
-
 main .products .cards {
   margin: 3%;
 }
-
 main .products .cards .card {
   display: grid;
   margin-bottom: 20px;
@@ -227,14 +195,12 @@ main .products .cards .card {
   background-color: rgba(98, 98, 158, 0.385);
   padding: 10px;
 }
-
 main .products .cards .card .fa-solid {
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 main .products .cards .card h2 {
   color: #ec5242;
   font-family: inter, sans-serif;
@@ -242,23 +208,19 @@ main .products .cards .card h2 {
   justify-content: center;
   align-items: center;
 }
-
 main .products .cards .card p {
   color: white;
   font-family: lato, sans-serif;
 }
-
 main .products .cards .card:focus,
 main .products .cards .card:hover {
   border: 1px solid #d3d3d3;
 }
-
 main .products .cards .center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 main .products .cards .center button {
   padding: 30px;
   border: none;
@@ -267,36 +229,34 @@ main .products .cards .center button {
   font-family: inter, sans-serif;
   color: white;
   width: 50%;
-  height: 100px;
+  height: auto;
 }
-
+main .products .see-more {
+  display: none;
+}
 main .feature {
   padding: 5%;
   width: 100%;
   height: 100%;
   background-color: white;
 }
-
 main .feature header {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
-
 main .feature header h2 {
   color: #272a31;
   margin-bottom: 10px;
   font-family: lato;
 }
-
 main .feature header span {
   width: 50px;
   height: 2px;
   border-radius: 5px;
   background-color: #ec5242;
 }
-
 main .feature .companies .list-company {
   background-image: url(../Images/blank-chess-board.gif);
   background-repeat: no-repeat;
@@ -311,29 +271,24 @@ main .feature .companies .list-company {
   display: flex;
   margin-top: 20px;
 }
-
 main .feature .companies .list-company img {
   width: 150px;
   margin-right: 5px;
 }
-
 main .feature .companies .list-company div {
   display: flex;
   flex-direction: column;
 }
-
 main .feature .companies .list-company div h3 {
   font-family: inter, sans-serif;
   margin-bottom: 5px;
   font-size: 30px;
 }
-
 main .feature .companies .list-company div h4 {
   font-family: lato, "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   margin-bottom: 5px;
   color: #ec5242;
 }
-
 main .feature .companies .list-company div span {
   margin-bottom: 5px;
   width: 30px;
@@ -341,137 +296,114 @@ main .feature .companies .list-company div span {
   border-radius: 5px;
   background-color: rgba(10, 8, 8, 0.503);
 }
-
 main .feature .companies .center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 main .feature .companies .center .more-or-less {
   width: 50%;
   height: 40px;
 }
-
 main .section-about {
   padding: 5%;
 }
-
 main .section-about .header-about {
   text-align: center;
   margin-top: 20px;
 }
-
 main .section-about .header-about p {
   color: #ec5242;
   font-size: 20px;
 }
-
 main .section-about .header-about h1 {
   color: #ec5242;
   font-size: 30px;
   font-weight: bolder;
   font-family: sans-serif, lato;
 }
-
 main .section-about .article-1 {
   border: solid 1px grey;
   background-color: white;
   padding: 10px;
 }
-
 main .section-about .reach {
   text-align: center;
   margin: 20px 20px;
 }
-
 main .section-about .reach span {
   color: #ec5242;
 }
-
 main .logo {
   padding: 5%;
   width: 100%;
   height: 100%;
   background-color: white;
 }
-
 main .logo header {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
-
 main .logo header h2 {
   color: #272a31;
   margin-bottom: 10px;
   font-family: lato;
 }
-
 main .logo header span {
   width: 50px;
   height: 2px;
   border-radius: 5px;
   background-color: #ec5242;
 }
-
 main .logo div {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 main .logo div img {
   margin-top: 20px;
   width: 50%;
   height: auto;
 }
-
 main .logo hr {
   width: 100%;
   margin-top: 30px;
   background-color: #6f6c6b;
 }
-
 main .summit-history {
   padding: 5%;
   width: 100%;
   height: 100%;
   background-color: white;
 }
-
 main .summit-history header {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
-
 main .summit-history header h2 {
   color: #272a31;
   margin-bottom: 10px;
   font-family: lato;
 }
-
 main .summit-history header span {
   width: 50px;
   height: 2px;
   border-radius: 5px;
   background-color: #ec5242;
 }
-
 main .summit-history p {
   margin-top: 15px;
   text-align: center;
 }
-
 main .summit-history .img {
   display: flex;
   justify-content: space-around;
   margin-top: 40px;
 }
-
 main .summit-history .img .first {
   background: linear-gradient(rgba(72, 0, 72, 0.8), rgba(192, 72, 72, 0.8)), url(../Images/workshop1.jpg);
   width: 40%;
@@ -484,7 +416,6 @@ main .summit-history .img .first {
   background-size: cover;
   height: 300px;
 }
-
 main .summit-history .img .second {
   background-image: linear-gradient(rgba(72, 0, 72, 0.8), rgba(192, 72, 72, 0.8)), url(../Images/workshop2.jpg);
   display: flex;
@@ -497,72 +428,60 @@ main .summit-history .img .second {
   background-size: cover;
   height: 300px;
 }
-
 main .partner {
   background-color: #272a31;
   padding: 5%;
   width: 100%;
   height: 100%;
 }
-
 main .partner span {
   width: 50px;
   height: 2px;
   border-radius: 5px;
   background-color: #ec5242;
 }
-
 main .partner header {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
-
 main .partner header h2 {
   margin-bottom: 10px;
   color: white;
   font-family: lato;
 }
-
 main .partner .partners-grid {
   width: 100%;
   display: grid;
   grid-template-columns: 33.33% 33.33% 33.33%;
 }
-
 main .partner .partners-grid p {
   color: #d3d3d3;
   font-size: 30px;
   margin-top: 10px;
 }
-
 main .partner .partners-grid .row {
   grid-column: 1;
   padding-left: 30px;
-  font-size: 60px;
+  font-size: xx-large;
 }
-
 main .partner .partners-grid .row-2 {
   grid-column: 3;
-  font-size: 60px;
+  font-size: xx-large;
 }
-
 main .footer {
   width: 100%;
 }
-
 main .footer div {
   display: flex;
   padding: 5%;
 }
-
 main .footer div img {
   width: 50%;
 }
-
 main .footer div p {
-  font-size: 20px;
+  font-size: 15px;
   color: #d3d3d3;
   font-family: inter, sans-serif;
 }
@@ -573,14 +492,12 @@ main .footer div p {
     background-repeat: no-repeat;
     background-size: contain;
   }
-
   main .social {
     width: 100%;
     display: block;
     background-color: #272a31;
     height: 50px;
   }
-
   main .social .social-container {
     display: flex;
     padding: 15px 15px 10px 0;
@@ -588,20 +505,16 @@ main .footer div p {
     align-items: center;
     list-style: none;
   }
-
   main .social .social-container .social-item {
     margin-left: 20px;
   }
-
   main .social .social-container .social-item a {
     text-decoration: none;
     color: white;
   }
-
   main .social .social-container .social-item a:focus {
     color: #ec5242;
   }
-
   main .navbar {
     width: 100%;
     display: grid;
@@ -612,26 +525,21 @@ main .footer div p {
     padding-left: 5%;
     height: 60px;
   }
-
   main .navbar .menu {
     display: block;
   }
-
   main .navbar .menu a img {
     width: 200px;
     display: block;
   }
-
   main .navbar .menu .hamburger {
     display: none;
   }
-
   main .navbar div {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-
   main .navbar div .list-container {
     display: flex;
     justify-content: space-around;
@@ -644,7 +552,6 @@ main .footer div p {
     transition: 0;
     list-style: none;
   }
-
   main .navbar div .list-container .list-item {
     border-bottom: none;
     padding-left: 20px;
@@ -652,30 +559,24 @@ main .footer div p {
     text-decoration: none;
     margin: 20px 0;
   }
-
   main .navbar div .list-container .list-item a {
     text-decoration: none;
     color: rgba(23, 3, 3, 0.537);
     padding: 10px;
   }
-
   main .navbar div .list-container .list-item a:focus {
     color: #ec5242;
   }
-
   main .navbar div .list-container .last-child a {
     border: 5px solid #ec5242;
   }
-
   main .section-1 {
     padding: 5% 10%;
     width: 80%;
   }
-
   main .section-1 .search {
     position: relative;
   }
-
   main .section-1 .search input {
     width: 100%;
     height: 30px;
@@ -683,11 +584,9 @@ main .footer div p {
     padding: 0;
     border-radius: 5px;
   }
-
   main .section-1 .search input::placeholder {
     padding: 10px;
   }
-
   main .section-1 .search .fa-search {
     position: absolute;
     color: white;
@@ -699,18 +598,15 @@ main .footer div p {
     background-color: #ec5242;
     right: 0;
   }
-
   main .section-1 .header-1 {
     margin-top: 20px;
   }
-
   main .section-1 .header-1 p {
     color: #ec5242;
     font-family: Inter, sans-serif;
     font-size: 30px;
     padding-bottom: 5px;
   }
-
   main .section-1 .header-1 h1 {
     display: flex;
     flex-wrap: wrap;
@@ -723,12 +619,10 @@ main .footer div p {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-
   main .section-1 .article-1 {
     border: 5px solid white;
     padding: 3%;
   }
-
   main .products {
     padding: 5%;
     width: 100%;
@@ -738,31 +632,26 @@ main .footer div p {
     background-position: 100%;
     background-repeat: no-repeat;
   }
-
   main .products header {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
   }
-
   main .products header h2 {
     color: white;
     margin-bottom: 10px;
   }
-
   main .products header span {
     width: 50px;
     height: 2px;
     border-radius: 5px;
     background-color: #ec5242;
   }
-
   main .products .cards {
     margin: 3%;
     display: flex;
   }
-
   main .products .cards .card {
     width: 100%;
     margin-right: 5px;
@@ -774,14 +663,12 @@ main .footer div p {
     background-color: rgba(255, 255, 255, 0.1);
     padding: 10px;
   }
-
   main .products .cards .card img {
     width: 50px;
     height: 30px;
     display: block;
     margin: auto;
   }
-
   main .products .cards .card h2 {
     color: #ec5242;
     font-size: small;
@@ -792,59 +679,49 @@ main .footer div p {
     justify-content: center;
     align-items: center;
   }
-
   main .products .cards .card p {
     color: white;
     text-align: center;
     font-family: lato, sans-serif;
   }
-
   main .products .cards .center {
     display: none;
   }
-
   main .products .see-more {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-
   main .products .see-more a {
     color: white;
   }
-
   main .feature {
     padding: 5%;
     width: 100%;
     height: 100%;
     background-color: white;
   }
-
   main .feature header {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
   }
-
   main .feature header h2 {
     color: #272a31;
     margin-bottom: 10px;
     font-family: lato;
   }
-
   main .feature header span {
     width: 50px;
     height: 2px;
     border-radius: 5px;
     background-color: #ec5242;
   }
-
   main .feature .companies {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-
   main .feature .companies .list-company {
     background-image: url(../Images/blank-chess-board.gif);
     background-repeat: no-repeat;
@@ -858,30 +735,25 @@ main .footer div p {
     display: flex;
     margin-top: 20px;
   }
-
   main .feature .companies .list-company img {
     width: 100%;
     height: 120px;
     margin-right: 5px;
   }
-
   main .feature .companies .list-company div {
     display: flex;
     flex-direction: column;
   }
-
   main .feature .companies .list-company div h3 {
     font-family: inter, sans-serif;
     margin-bottom: 5px;
     font-size: 30px;
   }
-
   main .feature .companies .list-company div h4 {
     font-family: lato, "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     margin-bottom: 5px;
     color: #ec5242;
   }
-
   main .feature .companies .list-company div span {
     margin-bottom: 5px;
     width: 30px;
@@ -889,30 +761,31 @@ main .footer div p {
     border-radius: 5px;
     background-color: rgba(10, 8, 8, 0.503);
   }
-
+  main .feature .center {
+    display: none;
+  }
+  main .feature .center .more-or-less {
+    display: none;
+  }
   main .section-about {
     padding: 5%;
   }
-
   main .section-about .header-about {
     text-align: center;
     width: 50%;
     margin: auto;
     margin-top: 20px;
   }
-
   main .section-about .header-about p {
     color: #ec5242;
     font-size: 20px;
   }
-
   main .section-about .header-about h1 {
     color: #ec5242;
     font-size: 30px;
     font-weight: bolder;
     font-family: sans-serif, lato;
   }
-
   main .section-about .article-1 {
     width: 50%;
     height: fit-content;
@@ -921,85 +794,71 @@ main .footer div p {
     background-color: white;
     padding: 20px;
   }
-
   main .section-about .article-1 p {
     font-size: 15px;
     font-family: lato, sans-serif;
     display: table-row;
   }
-
   main .section-about .reach {
     text-align: center;
     margin: 20px 20px;
   }
-
   main .section-about .reach span {
     color: #ec5242;
   }
-
   main .logo div {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-
   main .logo div img {
     margin-top: 20px;
     width: 50%;
     height: auto;
   }
-
   main .logo hr {
     width: 100%;
     margin-top: 30px;
     background-color: #6f6c6b;
   }
-
   main .partner {
     background-color: #272a31;
     padding: 5%;
     width: 100%;
     height: 100%;
   }
-
   main .partner span {
     width: 50px;
     height: 2px;
     border-radius: 5px;
     background-color: #ec5242;
   }
-
   main .partner header {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
   }
-
   main .partner header h2 {
     margin-bottom: 10px;
     color: white;
     font-family: lato;
   }
-
   main .partner .partners-grid {
     width: 100%;
     display: grid;
     grid-template-columns: auto auto auto auto auto;
   }
-
   main .partner .partners-grid p {
     color: #d3d3d3;
     font-size: 30px;
     margin-top: 50px;
   }
-
   main .partner .partners-grid .row {
     grid-area: 1/4;
     padding-left: 0;
     font-size: 30px;
   }
-
   main .partner .partners-grid .row-2 {
     grid-area: 1/5;
     font-size: 30px;
@@ -1009,34 +868,28 @@ main .footer div p {
     width: 100%;
     color: #272a31;
   }
-
   .about-footer div {
     display: flex;
     padding: 5%;
   }
-
   .about-footer div img {
     width: 50%;
     height: 50px;
   }
-
   .about-footer div p {
     font-size: 20px;
     color: #d3d3d3;
     font-family: cocogoose, inter, sans-serif;
   }
-
   .about-footer div p span {
     color: #272a31;
   }
 }
-
 .img {
   display: grid;
   grid-template-columns: 50% 50%;
   justify-content: space-between;
 }
-
 .img .first {
   background-image: url(../Images/workshop1.jpg);
   width: 40%;
@@ -1046,7 +899,6 @@ main .footer div p {
   background-size: cover;
   height: 300px;
 }
-
 .img .second {
   display: flex;
   flex-direction: column;
@@ -1056,3 +908,5 @@ main .footer div p {
   background-size: cover;
   height: 300px;
 }
+
+/*# sourceMappingURL=style.css.map */
