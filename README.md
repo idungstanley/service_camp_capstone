@@ -1,9 +1,6 @@
-# service_camp_capstone
-
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# portfolio
-
+# service camp
 > I create the nav and headline in my Capstone project, using HTML, CSS(flexbox), Linters.
 > I add the headlines, the projects cards, and also the about page.
 > I created the desktop version using media queries.
@@ -20,10 +17,6 @@ Additional description about the project and its features.
 - Technologies: Git and GitHub
 
 ## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
@@ -85,6 +78,7 @@ To get a local copy up and running follow these simple example steps.
 
 - Original design idea by <a href="https://www.behance.net/adagio07">Cindy Shin in Behance</a>.
 - Image condent from <a href="https://www.behance.net/adagio07">Virag's Github</a>.
+
 ## 📝 License
 
-This project is [test](./test.md) licensed.
+This project is [MIT](./MIT.md) licensed.
