@@ -10,6 +10,42 @@ main {
   background-repeat: no-repeat;
   background-size: contain;
 }
+main .menu {
+  position: relative;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .menu a img {
+  display: none;
+}
+main .menu .hamburger {
+  position: absolute;
+  width: 40px;
+  height: 6px;
+  background-color: rgba(0, 0, 0, 0.432);
+  border-radius: 1px;
+  transition: all 0.5s ease-in-out;
+}
+main .menu .hamburger::after,
+main .menu .hamburger::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 6px;
+  background-color: rgba(0, 0, 0, 0.432);
+  border-radius: 1px;
+  transition: all 0.5s ease-in-out;
+}
+main .menu .hamburger::after {
+  transform: translateY(8px);
+}
+main .menu .hamburger::before {
+  transform: translateY(-8px);
+}
 main .social {
   width: 100%;
   display: none;
@@ -29,58 +65,21 @@ main .navbar {
   position: absolute;
   z-index: 10;
   top: 0;
-  position: sticky;
   background-color: white;
   padding-left: 5%;
   height: 60px;
-}
-main .navbar .menu {
-  position: relative;
-  cursor: pointer;
-  width: 60px;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-main .navbar .menu a img {
-  display: none;
-}
-main .navbar .menu .hamburger {
-  position: absolute;
-  width: 40px;
-  height: 6px;
-  background-color: rgba(0, 0, 0, 0.432);
-  border-radius: 1px;
-  transition: all 0.5s ease-in-out;
-}
-main .navbar .menu .hamburger::before,
-main .navbar .menu .hamburger::after {
-  content: "";
-  position: absolute;
-  width: 40px;
-  height: 6px;
-  background-color: rgba(0, 0, 0, 0.432);
-  border-radius: 1px;
-  transition: all 0.5s ease-in-out;
-}
-main .navbar .menu .hamburger::before {
-  transform: translateY(-8px);
-}
-main .navbar .menu .hamburger::after {
-  transform: translateY(8px);
 }
 main .navbar .menu.open .hamburger {
   background: transparent;
   box-shadow: none;
 }
-main .navbar .menu.open .hamburger::before {
-  transform: rotate(45deg);
-  transform: translate(35px -35px);
-}
 main .navbar .menu.open .hamburger::after {
+  transform: translateY(35px) translateX(-35px);
+  transform: rotate(45deg);
+}
+main .navbar .menu.open .hamburger::before {
+  transform: translateY(35px) translateX(35px);
   transform: rotate(-45deg);
-  transform: translate(35px 35px);
 }
 main .navbar .list-container {
   display: block;
@@ -91,11 +90,9 @@ main .navbar .list-container {
   left: -100%;
   flex-direction: column;
   gap: 0;
-  width: 100%;
   height: 100vh;
   transition: 0.3s;
   background-color: white;
-  list-style: none;
 }
 main .navbar .list-container .list-item {
   border-bottom: solid 1px #6f6c6b;
@@ -108,8 +105,103 @@ main .navbar .list-container .list-item a {
   text-decoration: none;
   color: rgba(23, 3, 3, 0.537);
 }
+main .img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+main .img .first {
+  background: linear-gradient(rgba(72, 0, 72, 0.8), rgba(192, 72, 72, 0.8)), url(../Images/workshop1.jpg);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+}
+main .img .second {
+  background-image: linear-gradient(rgba(72, 0, 72, 0.8), rgba(192, 72, 72, 0.8)), url(../Images/workshop2.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+}
+main .summit-history {
+  padding: 5%;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+main .summit-history header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+main .summit-history header h2 {
+  color: #272a31;
+  margin-bottom: 10px;
+  font-family: lato, sans-serif;
+}
+main .summit-history header span {
+  width: 50px;
+  height: 2px;
+  border-radius: 5px;
+  background-color: #ec5242;
+}
+main .summit-history p {
+  margin-top: 15px;
+  text-align: center;
+}
+main .footer {
+  width: 100%;
+}
+main .footer div {
+  display: flex;
+  padding: 5%;
+}
+main .footer div img {
+  width: 50%;
+}
+main .footer div p {
+  font-size: 15px;
+  color: #d3d3d3;
+  font-family: inter, sans-serif;
+}
 main .section-1 {
   padding: 5%;
+}
+main .section-1 .header-1 {
+  margin-top: 50px;
+}
+main .section-1 .header-1 p {
+  color: #ec5242;
+  font-family: Inter, sans-serif;
+  font-size: 30px;
+  padding-bottom: 5px;
+}
+main .section-1 .header-1 h1 {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 40px;
+  color: #ec5242;
+  padding-bottom: 10px;
+  background-image: url(../Images/header-bg.jpeg);
+  background-position: bottom;
+  background-clip: initial;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 main .section-1 .search {
   position: relative;
@@ -135,30 +227,165 @@ main .section-1 .search .fa-search {
   background-color: #ec5242;
   right: 0;
 }
-main .section-1 .header-1 {
-  margin-top: 20px;
-}
-main .section-1 .header-1 p {
-  color: #ec5242;
-  font-family: Inter, sans-serif;
-  font-size: 30px;
-  padding-bottom: 5px;
-}
-main .section-1 .header-1 h1 {
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 40px;
-  color: #ec5242;
-  padding-bottom: 10px;
-  background-image: url(../Images/header-bg.jpeg);
-  background-position: bottom;
-  background-clip: initial;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 main .section-1 .article-1 {
   border: 2px wheat solid;
   padding: 3%;
+}
+main .partner {
+  background-color: #272a31;
+  padding: 5%;
+  width: 100%;
+  height: 100%;
+}
+main .partner header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+main .partner header h2 {
+  margin-bottom: 10px;
+  color: white;
+  font-family: lato, sans-serif;
+}
+main .partner header span {
+  width: 50px;
+  height: 2px;
+  border-radius: 5px;
+  background-color: #ec5242;
+}
+main .partner .partners-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+}
+main .partner .partners-grid p {
+  color: #d3d3d3;
+  font-size: 30px;
+  margin-top: 10px;
+}
+main .partner .partners-grid .row {
+  grid-column: 1;
+  padding-left: 30px;
+  font-size: xx-large;
+}
+main .partner .partners-grid .row-2 {
+  grid-column: 3;
+  font-size: xx-large;
+}
+main .logo {
+  padding: 5%;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+main .logo header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+main .logo header h2 {
+  color: #272a31;
+  margin-bottom: 10px;
+  font-family: lato, sans-serif;
+}
+main .logo header span {
+  width: 50px;
+  height: 2px;
+  border-radius: 5px;
+  background-color: #ec5242;
+}
+main .logo p {
+  margin-top: 10px;
+  text-align: center;
+  font-family: cocogoose, sans-serif;
+}
+main .logo div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .logo div img {
+  margin-top: 20px;
+  width: 50%;
+  height: auto;
+}
+main .logo hr {
+  width: 100%;
+  margin-top: 30px;
+  background-color: #6f6c6b;
+}
+main .feature {
+  padding: 5%;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+main .feature header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+main .feature header h2 {
+  color: #272a31;
+  margin-bottom: 10px;
+  font-family: lato, sans-serif;
+}
+main .feature header span {
+  width: 50px;
+  height: 2px;
+  border-radius: 5px;
+  background-color: #ec5242;
+}
+main .feature .companies .list-company {
+  background-image: url(../Images/blank-chess-board.gif);
+  background-repeat: no-repeat;
+  background-position: -20px -30px;
+  background-size: 20%;
+  padding: 10px;
+  width: 100%;
+  height: auto;
+  border-radius: 3px;
+  background-color: white;
+  display: flex;
+  margin-top: 20px;
+}
+main .feature .companies .list-company img {
+  width: 100%;
+  height: 100px;
+  margin-right: 5px;
+}
+main .feature .companies .list-company div {
+  display: flex;
+  flex-direction: column;
+}
+main .feature .companies .list-company div h3 {
+  font-family: inter, sans-serif;
+  margin-bottom: 5px;
+  font-size: 30px;
+}
+main .feature .companies .list-company div h4 {
+  font-family: lato, "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin-bottom: 5px;
+  color: #ec5242;
+}
+main .feature .companies .list-company div span {
+  margin-bottom: 5px;
+  width: 30px;
+  height: 3px;
+  border-radius: 5px;
+  background-color: rgba(10, 8, 8, 0.503);
+}
+main .feature .companies .center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .feature .companies .center .more-or-less {
+  width: 50%;
+  height: 40px;
 }
 main .products {
   padding: 5%;
@@ -195,12 +422,6 @@ main .products .cards .card {
   background-color: rgba(98, 98, 158, 0.385);
   padding: 10px;
 }
-main .products .cards .card .fa-solid {
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 main .products .cards .card h2 {
   color: #ec5242;
   font-family: inter, sans-serif;
@@ -234,83 +455,12 @@ main .products .cards .center button {
 main .products .see-more {
   display: none;
 }
-main .feature {
-  padding: 5%;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-}
-main .feature header {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-main .feature header h2 {
-  color: #272a31;
-  margin-bottom: 10px;
-  font-family: lato;
-}
-main .feature header span {
-  width: 50px;
-  height: 2px;
-  border-radius: 5px;
-  background-color: #ec5242;
-}
-main .feature .companies .list-company {
-  background-image: url(../Images/blank-chess-board.gif);
-  background-repeat: no-repeat;
-  background-position: -20px -30px;
-  background-size: 20%;
-  padding: 10px;
-  width: 100%;
-  height: 30px;
-  border-radius: 3px;
-  background-color: white;
-  height: min-content;
-  display: flex;
-  margin-top: 20px;
-}
-main .feature .companies .list-company img {
-  width: 150px;
-  margin-right: 5px;
-}
-main .feature .companies .list-company div {
-  display: flex;
-  flex-direction: column;
-}
-main .feature .companies .list-company div h3 {
-  font-family: inter, sans-serif;
-  margin-bottom: 5px;
-  font-size: 30px;
-}
-main .feature .companies .list-company div h4 {
-  font-family: lato, "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  margin-bottom: 5px;
-  color: #ec5242;
-}
-main .feature .companies .list-company div span {
-  margin-bottom: 5px;
-  width: 30px;
-  height: 3px;
-  border-radius: 5px;
-  background-color: rgba(10, 8, 8, 0.503);
-}
-main .feature .companies .center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-main .feature .companies .center .more-or-less {
-  width: 50%;
-  height: 40px;
-}
 main .section-about {
   padding: 5%;
 }
 main .section-about .header-about {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 main .section-about .header-about p {
   color: #ec5242;
@@ -334,186 +484,12 @@ main .section-about .reach {
 main .section-about .reach span {
   color: #ec5242;
 }
-main .logo {
-  padding: 5%;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-}
-main .logo header {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-main .logo header h2 {
-  color: #272a31;
-  margin-bottom: 10px;
-  font-family: lato;
-}
-main .logo header span {
-  width: 50px;
-  height: 2px;
-  border-radius: 5px;
-  background-color: #ec5242;
-}
-main .logo div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-main .logo div img {
-  margin-top: 20px;
-  width: 50%;
-  height: auto;
-}
-main .logo hr {
-  width: 100%;
-  margin-top: 30px;
-  background-color: #6f6c6b;
-}
-main .summit-history {
-  padding: 5%;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-}
-main .summit-history header {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-main .summit-history header h2 {
-  color: #272a31;
-  margin-bottom: 10px;
-  font-family: lato;
-}
-main .summit-history header span {
-  width: 50px;
-  height: 2px;
-  border-radius: 5px;
-  background-color: #ec5242;
-}
-main .summit-history p {
-  margin-top: 15px;
-  text-align: center;
-}
-main .summit-history .img {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 40px;
-}
-main .summit-history .img .first {
-  background: linear-gradient(rgba(72, 0, 72, 0.8), rgba(192, 72, 72, 0.8)), url(../Images/workshop1.jpg);
-  width: 40%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  color: white;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 300px;
-}
-main .summit-history .img .second {
-  background-image: linear-gradient(rgba(72, 0, 72, 0.8), rgba(192, 72, 72, 0.8)), url(../Images/workshop2.jpg);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  color: white;
-  width: 40%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 300px;
-}
-main .partner {
-  background-color: #272a31;
-  padding: 5%;
-  width: 100%;
-  height: 100%;
-}
-main .partner span {
-  width: 50px;
-  height: 2px;
-  border-radius: 5px;
-  background-color: #ec5242;
-}
-main .partner header {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-main .partner header h2 {
-  margin-bottom: 10px;
-  color: white;
-  font-family: lato;
-}
-main .partner .partners-grid {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 33.33% 33.33% 33.33%;
-}
-main .partner .partners-grid p {
-  color: #d3d3d3;
-  font-size: 30px;
-  margin-top: 10px;
-}
-main .partner .partners-grid .row {
-  grid-column: 1;
-  padding-left: 30px;
-  font-size: xx-large;
-}
-main .partner .partners-grid .row-2 {
-  grid-column: 3;
-  font-size: xx-large;
-}
-main .footer {
-  width: 100%;
-}
-main .footer div {
-  display: flex;
-  padding: 5%;
-}
-main .footer div img {
-  width: 50%;
-}
-main .footer div p {
-  font-size: 15px;
-  color: #d3d3d3;
-  font-family: inter, sans-serif;
-}
 
 @media screen and (min-width: 760px) {
   main {
     background-image: url(../Images/Website-background.png);
     background-repeat: no-repeat;
     background-size: contain;
-  }
-  main .social {
-    width: 100%;
-    display: block;
-    background-color: #272a31;
-    height: 50px;
-  }
-  main .social .social-container {
-    display: flex;
-    padding: 15px 15px 10px 0;
-    justify-content: flex-end;
-    align-items: center;
-    list-style: none;
-  }
-  main .social .social-container .social-item {
-    margin-left: 20px;
-  }
-  main .social .social-container .social-item a {
-    text-decoration: none;
-    color: white;
-  }
-  main .social .social-container .social-item a:focus {
-    color: #ec5242;
   }
   main .navbar {
     width: 100%;
@@ -549,8 +525,9 @@ main .footer div p {
     position: sticky;
     right: 0;
     height: 60px;
-    transition: 0;
-    list-style: none;
+  }
+  main .navbar div .list-container .last-child a {
+    border: 5px solid #ec5242;
   }
   main .navbar div .list-container .list-item {
     border-bottom: none;
@@ -567,61 +544,266 @@ main .footer div p {
   main .navbar div .list-container .list-item a:focus {
     color: #ec5242;
   }
-  main .navbar div .list-container .last-child a {
-    border: 5px solid #ec5242;
+  main .img {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
-  main .section-1 {
-    padding: 5% 10%;
-    width: 80%;
+  main .img .first {
+    background: linear-gradient(rgba(72, 0, 72, 0.8), rgba(192, 72, 72, 0.8)), url(../Images/workshop1.jpg);
+    width: 40%;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
   }
-  main .section-1 .search {
-    position: relative;
+  main .img .second {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(rgba(72, 0, 72, 0.8), rgba(192, 72, 72, 0.8)), url(../Images/workshop2.jpg);
+    width: 40%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
   }
-  main .section-1 .search input {
+  main .summit-history {
+    padding: 5%;
     width: 100%;
-    height: 30px;
+    height: 100%;
+    background-color: white;
+  }
+  main .summit-history header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  main .summit-history header h2 {
+    color: #272a31;
     margin-bottom: 10px;
-    padding: 0;
+    font-family: lato, sans-serif;
+  }
+  main .summit-history header span {
+    width: 50px;
+    height: 2px;
     border-radius: 5px;
-  }
-  main .section-1 .search input::placeholder {
-    padding: 10px;
-  }
-  main .section-1 .search .fa-search {
-    position: absolute;
-    color: white;
-    border-radius: 3px;
-    height: 30px;
-    padding: 5px;
-    width: 30px;
-    align-self: center;
     background-color: #ec5242;
-    right: 0;
   }
-  main .section-1 .header-1 {
+  main .summit-history p {
+    margin-top: 15px;
+    text-align: center;
+  }
+  main .social {
+    width: 100%;
+    display: block;
+    background-color: #272a31;
+    height: 50px;
+  }
+  main .social .social-container {
+    display: flex;
+    padding: 15px 15px 10px 0;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+  }
+  main .social .social-container .social-item {
+    margin-left: 20px;
+  }
+  main .social .social-container .social-item a {
+    text-decoration: none;
+    color: white;
+  }
+  main .social .social-container .social-item a:focus {
+    color: #ec5242;
+  }
+  main .about-footer {
+    width: 100%;
+    color: #272a31;
+  }
+  main .about-footer div {
+    display: flex;
+    padding: 5%;
+  }
+  main .about-footer div img {
+    width: 50%;
+    height: 50px;
+  }
+  main .about-footer div p {
+    font-size: 20px;
+    color: #d3d3d3;
+    font-family: cocogoose, inter, sans-serif;
+  }
+  main .about-footer div p span {
+    color: #272a31;
+  }
+  main .section-about {
+    padding: 5%;
+  }
+  main .section-about .header-about {
+    text-align: center;
+    width: 50%;
+    margin: auto;
+  }
+  main .section-about .header-about p {
+    color: #ec5242;
+    font-size: 20px;
+  }
+  main .section-about .header-about h1 {
+    color: #ec5242;
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: sans-serif, lato;
+  }
+  main .section-about .article-1 {
+    width: 50%;
+    height: auto;
+    margin: auto;
+    border: solid 1px grey;
+    background-color: white;
+    padding: 20px;
+  }
+  main .section-about .article-1 p {
+    font-size: 15px;
+    font-family: lato, sans-serif;
+    display: table-row;
+  }
+  main .section-about .reach {
+    text-align: center;
+    margin: 20px 20px;
+  }
+  main .section-about .reach span {
+    color: #ec5242;
+  }
+  main .logo div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  main .logo div img {
+    margin-top: 20px;
+    width: 50%;
+    height: auto;
+  }
+  main .logo hr {
+    width: 100%;
+    margin-top: 30px;
+    background-color: #6f6c6b;
+  }
+  main .feature {
+    padding: 5%;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+  }
+  main .feature header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  main .feature header h2 {
+    color: #272a31;
+    margin-bottom: 10px;
+    font-family: lato, sans-serif;
+  }
+  main .feature header span {
+    width: 50px;
+    height: 2px;
+    border-radius: 5px;
+    background-color: #ec5242;
+  }
+  main .feature .companies {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  main .feature .companies .list-company {
+    background-image: url(../Images/blank-chess-board.gif);
+    background-repeat: no-repeat;
+    background-position: 25px 25px;
+    background-size: 20%;
+    padding: 50px;
+    width: 100%;
+    border-radius: 3px;
+    background-color: white;
+    height: min-content;
+    display: flex;
     margin-top: 20px;
   }
-  main .section-1 .header-1 p {
-    color: #ec5242;
-    font-family: Inter, sans-serif;
-    font-size: 30px;
-    padding-bottom: 5px;
+  main .feature .companies .list-company img {
+    width: 100%;
+    height: 120px;
+    margin-right: 5px;
   }
-  main .section-1 .header-1 h1 {
+  main .feature .companies .list-company div {
     display: flex;
-    flex-wrap: wrap;
-    font-size: 40px;
-    color: #ec5242;
-    padding-bottom: 10px;
-    background-image: url(../Images/service_camp.jpeg);
-    background-position: bottom;
-    background-clip: initial;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    flex-direction: column;
   }
-  main .section-1 .article-1 {
-    border: 5px solid white;
-    padding: 3%;
+  main .feature .companies .list-company div h3 {
+    font-family: inter, sans-serif;
+    margin-bottom: 5px;
+    font-size: 30px;
+  }
+  main .feature .companies .list-company div h4 {
+    font-family: lato, "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    margin-bottom: 5px;
+    color: #ec5242;
+  }
+  main .feature .companies .list-company div span {
+    margin-bottom: 5px;
+    width: 30px;
+    height: 3px;
+    border-radius: 5px;
+    background-color: rgba(10, 8, 8, 0.503);
+  }
+  main .feature .center {
+    display: none;
+  }
+  main .feature .center .more-or-less {
+    display: none;
+  }
+  main .partner {
+    background-color: #272a31;
+    padding: 5%;
+    width: 100%;
+    height: 100%;
+  }
+  main .partner span {
+    width: 50px;
+    height: 2px;
+    border-radius: 5px;
+    background-color: #ec5242;
+  }
+  main .partner header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  main .partner header h2 {
+    margin-bottom: 10px;
+    color: white;
+    font-family: lato, sans-serif;
+  }
+  main .partner .partners-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+  }
+  main .partner .partners-grid p {
+    color: #d3d3d3;
+    font-size: 30px;
+    margin-top: 50px;
+  }
+  main .partner .partners-grid .row {
+    grid-area: 1/4;
+    padding-left: 0;
+    font-size: 30px;
+  }
+  main .partner .partners-grid .row-2 {
+    grid-area: 1/5;
+    font-size: 30px;
   }
   main .products {
     padding: 5%;
@@ -695,218 +877,59 @@ main .footer div p {
   main .products .see-more a {
     color: white;
   }
-  main .feature {
-    padding: 5%;
+  main .section-1 {
+    padding: 5% 10%;
+    width: 80%;
+  }
+  main .section-1 .search {
+    position: relative;
+  }
+  main .section-1 .search input {
     width: 100%;
-    height: 100%;
-    background-color: white;
-  }
-  main .feature header {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-  }
-  main .feature header h2 {
-    color: #272a31;
+    height: 30px;
     margin-bottom: 10px;
-    font-family: lato;
-  }
-  main .feature header span {
-    width: 50px;
-    height: 2px;
+    padding: 0;
     border-radius: 5px;
-    background-color: #ec5242;
   }
-  main .feature .companies {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  main .section-1 .search input::placeholder {
+    padding: 10px;
   }
-  main .feature .companies .list-company {
-    background-image: url(../Images/blank-chess-board.gif);
-    background-repeat: no-repeat;
-    background-position: 25px 25px;
-    background-size: 20%;
-    padding: 50px;
-    width: 100%;
-    border-radius: 3px;
-    background-color: white;
-    height: min-content;
-    display: flex;
-    margin-top: 20px;
-  }
-  main .feature .companies .list-company img {
-    width: 100%;
-    height: 120px;
-    margin-right: 5px;
-  }
-  main .feature .companies .list-company div {
-    display: flex;
-    flex-direction: column;
-  }
-  main .feature .companies .list-company div h3 {
-    font-family: inter, sans-serif;
-    margin-bottom: 5px;
-    font-size: 30px;
-  }
-  main .feature .companies .list-company div h4 {
-    font-family: lato, "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-    margin-bottom: 5px;
-    color: #ec5242;
-  }
-  main .feature .companies .list-company div span {
-    margin-bottom: 5px;
-    width: 30px;
-    height: 3px;
-    border-radius: 5px;
-    background-color: rgba(10, 8, 8, 0.503);
-  }
-  main .feature .center {
-    display: none;
-  }
-  main .feature .center .more-or-less {
-    display: none;
-  }
-  main .section-about {
-    padding: 5%;
-  }
-  main .section-about .header-about {
-    text-align: center;
-    width: 50%;
-    margin: auto;
-    margin-top: 20px;
-  }
-  main .section-about .header-about p {
-    color: #ec5242;
-    font-size: 20px;
-  }
-  main .section-about .header-about h1 {
-    color: #ec5242;
-    font-size: 30px;
-    font-weight: bolder;
-    font-family: sans-serif, lato;
-  }
-  main .section-about .article-1 {
-    width: 50%;
-    height: fit-content;
-    margin: auto;
-    border: solid 1px grey;
-    background-color: white;
-    padding: 20px;
-  }
-  main .section-about .article-1 p {
-    font-size: 15px;
-    font-family: lato, sans-serif;
-    display: table-row;
-  }
-  main .section-about .reach {
-    text-align: center;
-    margin: 20px 20px;
-  }
-  main .section-about .reach span {
-    color: #ec5242;
-  }
-  main .logo div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  main .logo div img {
-    margin-top: 20px;
-    width: 50%;
-    height: auto;
-  }
-  main .logo hr {
-    width: 100%;
-    margin-top: 30px;
-    background-color: #6f6c6b;
-  }
-  main .partner {
-    background-color: #272a31;
-    padding: 5%;
-    width: 100%;
-    height: 100%;
-  }
-  main .partner span {
-    width: 50px;
-    height: 2px;
-    border-radius: 5px;
-    background-color: #ec5242;
-  }
-  main .partner header {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-  }
-  main .partner header h2 {
-    margin-bottom: 10px;
+  main .section-1 .search .fa-search {
+    position: absolute;
     color: white;
-    font-family: lato;
+    border-radius: 3px;
+    height: 30px;
+    padding: 5px;
+    width: 30px;
+    align-self: center;
+    background-color: #ec5242;
+    right: 0;
   }
-  main .partner .partners-grid {
-    width: 100%;
-    display: grid;
-    grid-template-columns: auto auto auto auto auto;
+  main .section-1 .header-1 {
+    margin-top: 20px;
   }
-  main .partner .partners-grid p {
-    color: #d3d3d3;
+  main .section-1 .header-1 p {
+    color: #ec5242;
+    font-family: Inter, sans-serif;
     font-size: 30px;
-    margin-top: 50px;
+    padding-bottom: 5px;
   }
-  main .partner .partners-grid .row {
-    grid-area: 1/4;
-    padding-left: 0;
-    font-size: 30px;
-  }
-  main .partner .partners-grid .row-2 {
-    grid-area: 1/5;
-    font-size: 30px;
-  }
-
-  .about-footer {
-    width: 100%;
-    color: #272a31;
-  }
-  .about-footer div {
+  main .section-1 .header-1 h1 {
     display: flex;
-    padding: 5%;
+    flex-wrap: wrap;
+    font-size: 40px;
+    color: #ec5242;
+    padding-bottom: 10px;
+    background-image: url(../Images/service_camp.jpeg);
+    background-position: bottom;
+    background-clip: initial;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
-  .about-footer div img {
-    width: 50%;
-    height: 50px;
+  main .section-1 .article-1 {
+    border: 5px solid white;
+    padding: 3%;
   }
-  .about-footer div p {
-    font-size: 20px;
-    color: #d3d3d3;
-    font-family: cocogoose, inter, sans-serif;
-  }
-  .about-footer div p span {
-    color: #272a31;
-  }
-}
-.img {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  justify-content: space-between;
-}
-.img .first {
-  background-image: url(../Images/workshop1.jpg);
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 300px;
-}
-.img .second {
-  display: flex;
-  flex-direction: column;
-  background-image: url(../Images/workshop2.jpg);
-  width: 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 300px;
 }
 
 /*# sourceMappingURL=style.css.map */
