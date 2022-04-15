@@ -7,7 +7,7 @@
 }
 
 main {
-  background-image: url(../Images/mobile-bg.png);
+  background-image: url(./Images/mobile-bg.png);
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -132,9 +132,8 @@ main .img {
 }
 
 main .img .first {
-  background:
-    linear-gradient(rgba(72, 0, 72, 0.8), rgba(192, 72, 72, 0.8)),
-    url(../Imageworkshop1.jpg);
+  background: linear-gradient(rgba(72, 0, 72, 0.8), rgba(192, 72, 72, 0.8)),
+    url(./Imageworkshop1.jpg);
   width: 100%;
   display: flex;
   justify-content: center;
@@ -148,12 +147,11 @@ main .img .first {
 }
 
 main .img .second {
-  background-image:
-    linear-gradient(
+  background-image: linear-gradient(
       rgba(72, 0, 72, 0.8),
       rgba(192, 72, 72, 0.8)
     ),
-    url(../Images/workshop2.jpg);
+    url(./Images/workshop2.jpg);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -243,7 +241,7 @@ main .section-1 .header-1 h1 {
   font-size: 40px;
   color: #ec5242;
   padding-bottom: 10px;
-  background-image: url(../Images/header-bg.jpeg);
+  background-image: url(./Images/header-bg.jpeg);
   background-position: bottom;
   background-clip: initial;
   -webkit-background-clip: text;
@@ -417,7 +415,7 @@ main .feature header h2 {
 }
 
 main .feature .companies .list-company {
-  background-image: url(../Images/blank-chess-board.gif);
+  background-image: url(./Images/blank-chess-board.gif);
   background-repeat: no-repeat;
   background-position: -20px -30px;
   background-size: 20%;
@@ -448,12 +446,7 @@ main .feature .companies .list-company div h3 {
 }
 
 main .feature .companies .list-company div h4 {
-  font-family:
-    lato,
-    'Gill Sans',
-    'Gill Sans MT',
-    Calibri,
-    'Trebuchet MS',
+  font-family: lato, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
     sans-serif;
   margin-bottom: 5px;
   color: #ec5242;
@@ -488,7 +481,7 @@ main .products {
   width: 100%;
   height: 100%;
   background-size: cover;
-  background-image: url(../Images/program-bg.jpg);
+  background-image: url(./Images/program-bg.jpg);
   background-position: 100%;
   background-repeat: no-repeat;
 }
@@ -585,7 +578,7 @@ main .section-about .reach {
 
 @media screen and (min-width: 760px) {
   main {
-    background-image: url(../Images/Website-background.png);
+    background-image: url(./Images/Website-background.png);
     background-repeat: no-repeat;
     background-size: contain;
   }
@@ -684,9 +677,8 @@ main .section-about .reach {
   }
 
   main .img .first {
-    background:
-      linear-gradient(rgba(72, 0, 72, 0.8), rgba(192, 72, 72, 0.8)),
-      url(../Images/workshop1.jpg);
+    background: linear-gradient(rgba(72, 0, 72, 0.8), rgba(192, 72, 72, 0.8)),
+      url(./Images/workshop1.jpg);
     width: 40%;
     margin-bottom: 0;
     display: flex;
@@ -699,9 +691,8 @@ main .section-about .reach {
   main .img .second {
     display: flex;
     flex-direction: column;
-    background:
-      linear-gradient(rgba(72, 0, 72, 0.8), rgba(192, 72, 72, 0.8)),
-      url(../Images/workshop2.jpg);
+    background: linear-gradient(rgba(72, 0, 72, 0.8), rgba(192, 72, 72, 0.8)),
+      url(./Images/workshop2.jpg);
     width: 40%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -884,7 +875,7 @@ main .section-about .reach {
   }
 
   main .feature .companies .list-company {
-    background-image: url(../Images/blank-chess-board.gif);
+    background-image: url(./Images/blank-chess-board.gif);
     background-repeat: no-repeat;
     background-position: 25px 25px;
     background-size: 20%;
@@ -915,12 +906,7 @@ main .section-about .reach {
   }
 
   main .feature .companies .list-company div h4 {
-    font-family:
-      lato,
-      'Gill Sans',
-      'Gill Sans MT',
-      Calibri,
-      'Trebuchet MS',
+    font-family: lato, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
       sans-serif;
     margin-bottom: 5px;
     color: #ec5242;
@@ -990,7 +976,7 @@ main .section-about .reach {
     width: 100%;
     height: 100%;
     background-size: cover;
-    background-image: url(../Images/program-bg.jpg);
+    background-image: url(./Images/program-bg.jpg);
     background-position: 100%;
     background-repeat: no-repeat;
   }
@@ -1108,7 +1094,7 @@ main .section-about .reach {
     font-size: 40px;
     color: #ec5242;
     padding-bottom: 10px;
-    background-image: url(../Images/service_camp.jpeg);
+    background-image: url(./Images/service_camp.jpeg);
     background-position: bottom;
     background-clip: initial;
     -webkit-background-clip: text;
